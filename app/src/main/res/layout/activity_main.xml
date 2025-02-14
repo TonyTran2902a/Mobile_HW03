@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Username -->
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView1"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/edittext_box" />
+
+        <!-- Password -->
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textSize="18sp"
+            android:layout_below="@id/editText1"
+            android:layout_marginBottom="8dp"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView2"
+            android:inputType="textPassword"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/edittext_box" />
+
+        <!-- Retype Password -->
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retype Password"
+            android:textSize="18sp"
+            android:layout_below="@id/editText2"
+            android:layout_marginBottom="8dp"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView3"
+            android:layout_marginBottom="16dp"
+            android:inputType="textPassword"
+            android:background="@drawable/edittext_box" />
+
+        <!-- Birthdate -->
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Birthdate"
+            android:textSize="18sp"
+            android:layout_below="@id/editText3"
+            android:layout_marginBottom="8dp"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView6"
+            android:layout_alignParentStart="true"
+            android:ems="8"
+            android:background="@drawable/edittext_box" />
+
+        <Button
+            android:id="@+id/selectButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select"
+            android:layout_below="@id/textView6"
+            android:layout_toRightOf="@id/editText4"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp" />
+
+        <!-- Gender -->
+        <TextView
+            android:id="@+id/genderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textSize="18sp"
+            android:layout_below="@id/editText4"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/genderType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/genderText"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textSize="18sp" />
+        </RadioGroup>
+
+        <!-- Hobbies -->
+        <TextView
+            android:id="@+id/hobbiesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hobbies"
+            android:textSize="18sp"
+            android:layout_below="@id/genderType"
+            android:layout_marginTop="16dp" />
+
+        <CheckBox
+            android:id="@+id/tennis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hobbiesText"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:text="Tennis"
+            android:onClick="onCheckboxClicked"/>
+
+        <CheckBox
+            android:id="@+id/football"
+            android:layout_width= "wrap_content"
+            android:layout_height= "wrap_content"
+            android:text="Football"
+            android:layout_below="@id/hobbiesText"
+            android:layout_toRightOf="@id/tennis"
+            android:layout_marginLeft="20dp"
+            android:onClick="onCheckboxClicked"
+            />
+        <CheckBox
+            android:id="@+id/others"
+            android:layout_width= "wrap_content"
+            android:layout_height= "wrap_content"
+            android:text="Others"
+            android:layout_below="@id/hobbiesText"
+            android:layout_toRightOf="@id/football"
+            android:layout_marginLeft="20dp"
+            android:onClick="onCheckboxClicked"
+            />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/tennis"
+            android:text="Reset"
+            android:layout_marginLeft="90dp"
+            />
+
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_below="@id/tennis"
+            android:text="Sign up"
+            android:layout_toRightOf="@id/reset"
+            />
+    </RelativeLayout>
+</ScrollView>
